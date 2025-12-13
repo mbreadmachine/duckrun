@@ -21,6 +21,34 @@ body {
     justify-content: center;
     height: var(--titleboxheight);
     font-size: 100px;
+    margin-top: 20px;
+}
+
+.titleduck {
+    position: absolute;
+    width: 50px;
+    z-index: -100;
+}
+
+.buttonsection {
+   display: flex;
+   flex-direction: column;
+   margin-left: 20px;
+   margin-top: 100px;
+   gap: 40px;
+}
+
+.menubutton {
+    font-size: 30px;
+    border: none;
+    background-color: beige;
+    padding: 13px;
+    width: 350px;
+}
+
+.menubutton:hover {
+    background-color: rgb(88, 228, 102);
+    cursor: pointer;
 }
 
 @keyframes letterfall {
@@ -29,6 +57,15 @@ body {
     }
     to {
         translate: 0px;
+    }
+}
+
+@keyframes titleduck {
+    from {
+        translate: -10vw;
+    }
+    to {
+        translate: 110vw
     }
 }
 
