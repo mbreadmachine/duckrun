@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Upheaval";
+    src: url("./assets/upheaval.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: "Upheaval";
+}
+
+:root {
+    --titleboxheight: 80%
+}
+
+.titlesection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--titleboxheight);
+    font-size: 100px;
+}
+
+@keyframes letterfall {
+    from {
+        translate: 0px -200px;
+    }
+    to {
+        translate: 0px;
+    }
+}
+
+.space {
+    width: 20px;
+}
+
+.menugrid {
+    height: (100% - var(--titleboxheight));
+    display: grid;
+    grid-template-columns: 50% 50%;
+}

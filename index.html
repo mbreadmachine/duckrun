@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/src/main.js" defer></script>
+    <title>DUCKRUN EXTREME</title>
+</head>
+
+<body>
+    
+    <div id="mainmenu"></div>
+    <div id="pixi-container"></div>
+    <template id="menutemplate">
+        <div id="menutoremove" class="menulayout">
+            <div class="titlesection">
+                <span>D</span>
+                <span>U</span>
+                <span>C</span>
+                <span>K</span>
+                <span class="space"></span>
+                <span>R</span>
+                <span>U</span>
+                <span>N</span>
+            </div>
+            <div class="menugrid">
+                <div class="buttonsection">
+                    <button id="runthegame">KEZDHETED A JÁTÉKOT.</button>
+                </div>
+                <div>
+                    <!--helytartó (placeholder)-->
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="pausetemplate">
+        <div id="exitbutton">
+            <button id="stopthegame">VISZLÁT GECI.</button>
+        </div>
+        
+    </template>
+</body>
+</html>
