@@ -48,6 +48,7 @@ body {
     padding: 13px;
     width: 350px;
     color: black
+    !important
 }
 
 .menubutton:hover {
@@ -79,4 +80,64 @@ body {
 
 .menugrid {
     height: (100% - var(--titleboxheight));
+}
+
+.dialog {
+}
+
+.volumecontrol {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 400px;
+    
+}
+
+.volumeclabels {
+    text-align: center;
+}
+
+.volumelabel {
+    margin-top: 4px;
+}
+
+.volumeicons {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.volumeicons input[type="range"] {
+    flex: 1;
+    width: 100%;
+}
+
+.savetopbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border-width: 1px;
+    border-radius: 6px;
+    padding: 4px;
+}
+button:hover {
+    background-color: rgb(88, 228, 102);
+    cursor: pointer;
+}
+
+.iconbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.danger {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.danger:hover {
+    background-color: rgb(108, 4, 4);
 }
