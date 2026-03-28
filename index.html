@@ -62,34 +62,48 @@
             <button>
                 <div class="iconbutton">
                     <span class="material-symbols-outlined">download</span>
-                    Mentés exportálása
+                    <p>Mentés exportálása</p>
                 </div>
 
             </button>
             <button>
                 <div class="iconbutton">
                     <span class="material-symbols-outlined">upload</span>
-                    Mentés importálása
+                    <p>Mentés importálása</p>
                 </div>
             </button>
             <button class="danger">
                 <div class="iconbutton">
                     <span class="material-symbols-outlined">delete</span>
-                    Mentés törlése
+                    <p>Mentés törlése</p>
                 </div>
             </button>
         </div>
         <hr>
         <div>
-            <button id="settingsClose">Bezárás</button>
+            <button id="settingsClose" class="modalclosebutton">Bezárás</button>
         </div>
     </dialog>
     <dialog id="skinsDialog" closedby="any">
         <h1>Kinézetek</h1>
-        <p>PÉNISZ ÓRIÁSI BAZDMEG</p>
+        <div class="skinsSelectorUI">
+            <button>Balra</button>
+            <div class="skinBuy">
+                <h2>Ügynök kacsa</h2>
+                <img src="./assets/ducks/duck_agent.png" class="duckpreview nn"/>
+                <div>
+                    <div class="pricewithcoin">
+                        <p>Ár: 200</p>
+                        <img src="./assets/coin.png" class="coin nn"/>
+                    </div>
+                    <button>Kiválasztás</button>
+                </div>
+            </div>
+            <button>Jobbra</button>
+        </div>
         <hr>
         <div>
-            <button id="skinsClose">Bezárás</button>
+            <button id="skinsClose" class="modalclosebutton">Bezárás</button>
         </div>
     </dialog>
     <dialog id="creditsDialog" closedby="any">
@@ -97,7 +111,7 @@
         <p>Csinálta: ANYÁD</p>
         <hr>
         <div>
-            <button id="creditsClose">Bezárás</button>
+            <button id="creditsClose" class="modalclosebutton">Bezárás</button>
         </div>
     </dialog>
 
@@ -105,7 +119,7 @@
     <template id="menutemplate">
         <div id="menutoremove" class="menulayout">
             <div>
-                <img src="./assets/duck.placeholder.png" id="titleduck" class="titleduck">
+                <img src="./assets/ducks/duck_boy.png" id="titleduck" class="titleduck nn">
                 <div class="titlesection">
                     <span>D</span>
                     <span>U</span>

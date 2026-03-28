@@ -83,6 +83,7 @@ body {
 }
 
 .dialog {
+    font-size: x-large;
 }
 
 .volumecontrol {
@@ -118,9 +119,12 @@ body {
 }
 
 button {
+    all: unset;
     border-width: 1px;
     border-radius: 6px;
     padding: 4px;
+    background-color: rgb(224, 224, 192);
+    border: 1px grey solid;
 }
 button:hover {
     background-color: rgb(88, 228, 102);
@@ -131,6 +135,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: large;
 }
 
 .danger {
@@ -140,4 +145,42 @@ button:hover {
 
 .danger:hover {
     background-color: rgb(108, 4, 4);
+}
+
+.coin {
+    height: 20px;  
+    margin-bottom: 2px; 
+}
+
+.modalclosebutton {
+    font-size: x-large;
+}
+
+.skinsSelectorUI {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: x-large;
+}
+
+.duckpreview {
+    height: 200px; 
+}
+
+.skinBuy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricewithcoin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nn { /* nn = Nearest Neighbour (scaling) */
+    image-rendering: pixelated;
 }
