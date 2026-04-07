@@ -1,4 +1,5 @@
 import runGame from "./game"
+import {skinMenuRefresh, nextOrPrevDuck} from "./skinsmodalController"
 //runGame()
 
 let stopgameevent = new Event("stopgamenow")
@@ -32,6 +33,8 @@ function showMainMenu() {
 
   // gombok beállítása
   document.getElementById("runthegame").addEventListener("click", switchToGame)
+  document.getElementById("skinleftbutton").addEventListener("click", () => nextOrPrevDuck("prev"))
+  document.getElementById("skinrightbutton").addEventListener("click", () => nextOrPrevDuck("next"))
 }
 
 function switchToGame() {
@@ -58,3 +61,4 @@ function stopGame() {
 }
 
 showMainMenu()
+skinMenuRefresh()

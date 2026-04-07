@@ -1,154 +1,170 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="height=device-height, initial-scale=0.6" />
 
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
 
     <script type="module" src="/src/main.js" defer></script>
     <script type="module" src="/src/mainmenuController.js" defer></script>
-    
-    <title>DUCKRUN EXTREME</title>
-</head>
+    <script type="module" src="/src/skinsmodalController.js" defer></script>
 
-<body id="fullscreencontainer">
-    
+    <title>DUCKRUN EXTREME</title>
+  </head>
+
+  <body id="fullscreencontainer">
     <div id="mainmenu"></div>
     <div id="pixi-container"></div>
 
     <!-- dialogok -->
     <dialog id="settingsDialog" closedby="any" class="dialog">
-        <h1>Beállítások</h1>
-        <label for="musicvolume">Zene</label>
-        <div class="volumecontrol">
-            <div class="volumeicons">
-                <div class="volumeclabels">
-                    <span class="material-symbols-outlined">volume_off</span>
-                    <p class="volumelabel">ki</p>
-                </div>
-                <input type="range" min="0" max="100" step="100" id="musicvolume">
-                <div class="volumeclabels">
-                    <span class="material-symbols-outlined">volume_up</span>
-                    <p class="volumelabel">be</p>
-                </div>
-            </div>
+      <h1>Beállítások</h1>
+      <label for="musicvolume">Zene</label>
+      <div class="volumecontrol">
+        <div class="volumeicons">
+          <div class="volumeclabels">
+            <span class="material-symbols-outlined">volume_off</span>
+            <p class="volumelabel">ki</p>
+          </div>
+          <input type="range" min="0" max="100" step="100" id="musicvolume" />
+          <div class="volumeclabels">
+            <span class="material-symbols-outlined">volume_up</span>
+            <p class="volumelabel">be</p>
+          </div>
         </div>
+      </div>
 
-        <label for="effectvolume">Hangeffektek</label>
-        <div class="volumecontrol">
-            <div class="volumeicons">
-                <div class="volumeclabels">
-                    <span class="material-symbols-outlined">volume_off</span>
-                    <p class="volumelabel">ki</p>
-                </div>
-                <input type="range" min="0" max="100" step="100" id="effectvolume">
-                <div class="volumeclabels">
-                    <span class="material-symbols-outlined">volume_up</span>
-                    <p class="volumelabel">be</p>
-                </div>
-            </div>
+      <label for="effectvolume">Hangeffektek</label>
+      <div class="volumecontrol">
+        <div class="volumeicons">
+          <div class="volumeclabels">
+            <span class="material-symbols-outlined">volume_off</span>
+            <p class="volumelabel">ki</p>
+          </div>
+          <input type="range" min="0" max="100" step="100" id="effectvolume" />
+          <div class="volumeclabels">
+            <span class="material-symbols-outlined">volume_up</span>
+            <p class="volumelabel">be</p>
+          </div>
         </div>
-        
-        <hr>
-        <div class="savetopbar">
-            <h2>Mentés kezelése</h2>
-            <p>Feloldva: 9/11<br>Coinok: 69420</p>
-        </div>
-        
-        <div class="savebuttons">
-            <button>
-                <div class="iconbutton">
-                    <span class="material-symbols-outlined">download</span>
-                    <p>Mentés exportálása</p>
-                </div>
+      </div>
 
-            </button>
-            <button>
-                <div class="iconbutton">
-                    <span class="material-symbols-outlined">upload</span>
-                    <p>Mentés importálása</p>
-                </div>
-            </button>
-            <button class="danger">
-                <div class="iconbutton">
-                    <span class="material-symbols-outlined">delete</span>
-                    <p>Mentés törlése</p>
-                </div>
-            </button>
-        </div>
-        <hr>
-        <div>
-            <button id="settingsClose" class="modalclosebutton">Bezárás</button>
-        </div>
+      <hr />
+      <div class="savetopbar">
+        <h2>Mentés kezelése</h2>
+        <p>Feloldva: 9/11<br />Coinok: 69420</p>
+      </div>
+
+      <div class="savebuttons">
+        <button>
+          <div class="iconbutton">
+            <span class="material-symbols-outlined">download</span>
+            <p>Mentés exportálása</p>
+          </div>
+        </button>
+        <button>
+          <div class="iconbutton">
+            <span class="material-symbols-outlined">upload</span>
+            <p>Mentés importálása</p>
+          </div>
+        </button>
+        <button class="danger">
+          <div class="iconbutton">
+            <span class="material-symbols-outlined">delete</span>
+            <p>Mentés törlése</p>
+          </div>
+        </button>
+      </div>
+      <hr />
+      <div>
+        <button id="settingsClose" class="modalclosebutton">Bezárás</button>
+      </div>
     </dialog>
     <dialog id="skinsDialog" closedby="any">
-        <h1>Kinézetek</h1>
-        <div class="skinsSelectorUI">
-            <button>Balra</button>
-            <div class="skinBuy">
-                <h2>Ügynök kacsa</h2>
-                <img src="./assets/ducks/duck_agent.png" class="duckpreview nn"/>
-                <div>
-                    <div class="pricewithcoin">
-                        <p>Ár: 200</p>
-                        <img src="./assets/coin.png" class="coin nn"/>
-                    </div>
-                    <button>Kiválasztás</button>
-                </div>
-            </div>
-            <button>Jobbra</button>
+      <h1>Kinézetek</h1>
+      <div class="skinsSelectorUI">
+        <button id="skinleftbutton">
+          <span class="material-symbols-outlined icon">arrow_left</span>
+        </button>
+        <div class="skinBuy" id="skindetail">
+          <!-- Ide be van illesztve a #ducktemplate -->
         </div>
-        <hr>
-        <div>
-            <button id="skinsClose" class="modalclosebutton">Bezárás</button>
-        </div>
+        <button id="skinrightbutton">
+          <span class="material-symbols-outlined icon">arrow_right</span>
+        </button>
+      </div>
+      <hr />
+      <div>
+        <button id="skinsClose" class="modalclosebutton">Bezárás</button>
+      </div>
     </dialog>
     <dialog id="creditsDialog" closedby="any">
-        <h1>Kreditek</h1>
-        <p>Csinálta: ANYÁD</p>
-        <hr>
-        <div>
-            <button id="creditsClose" class="modalclosebutton">Bezárás</button>
-        </div>
+      <h1>Kreditek</h1>
+      <p>Csinálta: ANYÁD</p>
+      <hr />
+      <div>
+        <button id="creditsClose" class="modalclosebutton">Bezárás</button>
+      </div>
     </dialog>
 
     <!-- template-ek -->
     <template id="menutemplate">
-        <div id="menutoremove" class="menulayout">
-            <div>
-                <img src="./assets/ducks/duck_boy.png" id="titleduck" class="titleduck nn">
-                <div class="titlesection">
-                    <span>D</span>
-                    <span>U</span>
-                    <span>C</span>
-                    <span>K</span>
-                    <span class="space"></span>
-                    <span>R</span>
-                    <span>U</span>
-                    <span>N</span>
-                </div>
-            </div>
-            <div class="menugrid">
-                <div class="buttonsection">
-                    <button id="runthegame" class="menubutton">Játék indítása</button>
-                    <button id="skinsmbt" class="menubutton">Kinézetek</button>
-                    <button id="settingsmbt" class="menubutton">Beállítások</button>
-                    <button id="creditsmbt" class="menubutton">Kreditek</button>
-                </div>
-                <div>
-                    <!--helytartó (placeholder)-->
-                </div>
-            </div>
+      <div id="menutoremove" class="menulayout">
+        <div>
+          <img
+            src="./assets/ducks/duck_boy.png"
+            id="titleduck"
+            class="titleduck nn"
+          />
+          <div class="titlesection">
+            <span>D</span>
+            <span>U</span>
+            <span>C</span>
+            <span>K</span>
+            <span class="space"></span>
+            <span>R</span>
+            <span>U</span>
+            <span>N</span>
+          </div>
         </div>
+        <div class="menugrid">
+          <div class="buttonsection">
+            <button id="runthegame" class="menubutton">Játék indítása</button>
+            <button id="skinsmbt" class="menubutton">Kinézetek</button>
+            <button id="settingsmbt" class="menubutton">Beállítások</button>
+            <button id="creditsmbt" class="menubutton">Kreditek</button>
+          </div>
+          <div>
+            <!--helytartó (placeholder)-->
+          </div>
+        </div>
+      </div>
     </template>
     <template id="pausetemplate">
-        <div id="exitbutton">
-            <button id="stopthegame">VISZLÁT GECI.</button>
-        </div>
-        
+      <div id="exitbutton">
+        <button id="stopthegame">VISZLÁT GECI.</button>
+      </div>
     </template>
-</body>
+    <template id="ducktemplate">
+      <h2 id="skinduckname">Fiú kacsa</h2>
+      <img
+        src="./assets/ducks/duck_boy.png"
+        class="duckpreview nn"
+        id="skinduckimg"
+      />
+      <div>
+        <div class="pricewithcoin">
+          <p id="skinduckprice">Ár: 0</p>
+          <img src="./assets/coin.png" class="coin nn" />
+        </div>
+        <button id="skinduckbutton">Kiválasztás</button>
+      </div>
+    </template>
+  </body>
 </html>
